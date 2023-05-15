@@ -1,9 +1,8 @@
 
     package ru.netology.service;
 
-import org.testng.annotations.Test;
-
-import static org.testng.Assert.assertEquals;
+    import org.junit.Test;
+    import static org.junit.Assert.assertEquals;
 
     public class CashbackHackServiceTest {
 
@@ -12,7 +11,7 @@ import static org.testng.Assert.assertEquals;
 
             CashbackHackService service = new CashbackHackService();
 
-            assertEquals(service.remain(500), 500);
+            assertEquals(500, service.remain(500));
         }
 
         @Test
@@ -20,7 +19,7 @@ import static org.testng.Assert.assertEquals;
 
             CashbackHackService service = new CashbackHackService();
 
-            assertEquals(service.remain(1_000), 0);
+            assertEquals(0, service.remain(1_000));
         }
 
         @Test
@@ -28,7 +27,7 @@ import static org.testng.Assert.assertEquals;
 
             CashbackHackService service = new CashbackHackService();
 
-            assertEquals(service.remain(999), 1);
+            assertEquals(1, service.remain(999));
         }
 
         @Test
@@ -36,7 +35,7 @@ import static org.testng.Assert.assertEquals;
 
             CashbackHackService service = new CashbackHackService();
 
-            assertEquals(service.remain(1_001), 999);
+            assertEquals(999, service.remain(1_001));
         }
 
         @Test
@@ -44,7 +43,7 @@ import static org.testng.Assert.assertEquals;
 
             CashbackHackService service = new CashbackHackService();
 
-            assertEquals(service.remain(0), 1_000);
+            assertEquals(1_000, service.remain(0));
         }
 
         @Test
@@ -52,7 +51,7 @@ import static org.testng.Assert.assertEquals;
 
             CashbackHackService service = new CashbackHackService();
 
-            assertEquals(service.remain(1_500), 500);
+            assertEquals(500, service.remain(1_500));
         }
 
         @Test
@@ -60,7 +59,7 @@ import static org.testng.Assert.assertEquals;
 
             CashbackHackService service = new CashbackHackService();
 
-            assertEquals(service.remain(2_000), 0);
+            assertEquals(0, service.remain(2_000));
         }
 
         @Test
@@ -68,9 +67,8 @@ import static org.testng.Assert.assertEquals;
 
             CashbackHackService service = new CashbackHackService();
 
-            assertEquals(service.remain(2_500), 500);
+            assertEquals(500, service.remain(2_500));
         }
 
     }
-
 
